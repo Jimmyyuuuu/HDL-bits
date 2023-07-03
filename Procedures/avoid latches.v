@@ -12,7 +12,7 @@ module top_module (
         else 
            shut_off_computer = 0;
     end
- //當arrived=gas的時候，keep_driving要為1
+
     always @(*) begin
         if (~arrived) //if arrived=0
             keep_driving = ~gas_tank_empty;
