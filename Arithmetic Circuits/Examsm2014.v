@@ -23,7 +23,7 @@ module top_module (
     assign sum[4] = cout[3];
     
 endmodule
-//法2 generate
+//法2 generate (by name)
 
 module top_module (
     input [3:0] x,
