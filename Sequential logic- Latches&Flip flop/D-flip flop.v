@@ -3,7 +3,7 @@ module top_module (
     input d,
     output reg q );//
     always@(posedge clk)begin
-        q=d;
+        q<=d;
     end
     // Use a clocked always block
     //   copy d to q at every positive edge of clk
