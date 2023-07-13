@@ -119,7 +119,8 @@ module top_module(
                 end
         end
     //再來要來實行，如果reset會回到AM，如果到了11:59:59AM要轉成12:00:00PM
-    always@(posedge clk)
+    //通過在複位時將 pm_temp 設置為上午（AM），然後在滿足特定條件時進行取反操作，就能實現AM和PM之間的切換。 在初始時刻的情況下，如果 pm_temp 的值不重要，可以假設其初始值為上午（AM），然後在滿足特定條件時進行AM和PM的轉換。
+      always@(posedge clk)
         begin
             if(reset)
                 pm_temp <= 1'b0;
